@@ -1,0 +1,10 @@
+#在你的R安装目录的/etc/Rprofile.site文件里添加
+
+local({old <- getOption("defaultPackages")
+        options(defaultPackages = c(old, "packageName",···))})
+
+if the system is ubuntu：
+#在UBUNTU系统中，/etc/R/Rprofile-site的确存在，但修改它是没有意义的，应该把该文件拷备到/usr/local/lib/R/etc/目录下，再按上述方法修改，则成功！
+
+#查看加载的包
+(.packages())
